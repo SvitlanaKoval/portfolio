@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svitlana Koval | Portfolio</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.5; }
+      header { padding: 48px 20px; max-width: 920px; margin: 0 auto; }
+      h1 { margin: 0 0 8px; font-size: 36px; }
+      .tag { opacity: 0.8; }
+      main { padding: 0 20px 60px; max-width: 920px; margin: 0 auto; }
+      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 18px; margin: 14px 0; }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; }
+      .pill { border: 1px solid #ddd; border-radius: 999px; padding: 6px 10px; font-size: 13px; }
+      a { text-decoration: none; }
+      footer { padding: 20px; max-width: 920px; margin: 0 auto; opacity: 0.8; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Svitlana Koval</h1>
+      <div class="tag">Software Engineer | Frontend / Full-Stack (JS/TS, React, Node.js)</div>
+      <p>
+        I build modern web UIs and help modernize legacy systems. Currently at Great Valley Technologies (GVT),
+        modernizing a large medical/billing application.
+      </p>
+      <p>
+        <a href="https://github.com/SvitlanaKoval">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/svitlana-koval-74ba3a357/">LinkedIn</a>
+      </p>
+    </header>
+
+    <main>
+      <h2>Projects</h2>
+
+      <div class="card">
+        <h3>Charge Entry Module (Healthcare/Billing UI)</h3>
+        <p>
+          Complex workflow screen with multiple tabs and modals, data-heavy interactions, and validation.
+          Focus: maintainability, performance, and UX.
+        </p>
+        <div class="row">
+          <span class="pill">JavaScript</span>
+          <span class="pill">UI Architecture</span>
+          <span class="pill">Refactoring</span>
+          <span class="pill">SQL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Real-time Trading UI Demo (Practice)</h3>
+        <p>Dashboard UI with streaming updates, chart area, and order panel. Focus: performance patterns.</p>
+        <div class="row">
+          <span class="pill">React</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">WebSockets</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>UI Components & Patterns Library (Practice)</h3>
+        <p>Reusable UI components: forms, modals, tables, loading/error states, validation helpers.</p>
+        <div class="row">
+          <span class="pill">React</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">CSS</span>
+        </div>
+      </div>
+
+      <h2>Skills</h2>
+      <div class="row">
+        <span class="pill">JavaScript</span><span class="pill">TypeScript</span><span class="pill">React</span>
+        <span class="pill">Node.js</span><span class="pill">HTML</span><span class="pill">CSS</span>
+        <span class="pill">SQL</span><span class="pill">Git</span>
+      </div>
+    </main>
+
+    <footer>© <span id="y"></span> Svitlana Koval</footer>
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
