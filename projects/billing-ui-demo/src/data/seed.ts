@@ -1,0 +1,31 @@
+export const seedInvoices: Invoice[] = [
+  {
+    id: "1",
+    accountName: "Green Valley Clinic",
+    invoiceNumber: "INV-1001",
+    serviceDate: "2025-11-10",
+    amountCents: 12500,
+    status: "Open",
+    notes: "Follow up required (demo text).",
+    updatedAt: Date.now() - 1000 * 60 * 60 * 12,
+  },
+  {
+    id: "2",
+    accountName: "North River Family Care",
+    invoiceNumber: "INV-1002",
+    serviceDate: "2025-10-02",
+    amountCents: 8900,
+    status: "Paid",
+    updatedAt: Date.now() - 1000 * 60 * 60 * 48,
+  },
+  {
+    id: "3",
+    accountName: "Sunrise Health Group",
+    invoiceNumber: "INV-1003",
+    serviceDate: "2025-09-15",
+    amountCents: 40250,
+    status: "Denied",
+    notes: "Demo: missing authorization.",
+    updatedAt: Date.now() - 1000 * 60 * 60 * 96,
+  },
+];
