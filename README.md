@@ -27,7 +27,7 @@ A complex workflow screen with multiple tabs and modals, data-heavy interactions
 - Tech: JavaScript, React-style component patterns, SQL-backed datasets
 - Focus: Reliability, maintainability, and user efficiency
 
-> *Code sample coming soon (sanitized / recreated demo version).*
+> *The code sample has been committed (sanitized/recreated demo version).*
 
 ---
 
