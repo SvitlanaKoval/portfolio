@@ -5,6 +5,8 @@ import { InvoiceTable } from "./components/InvoiceTable";
 import { InvoiceFormModal } from "./components/InvoiceFormModal";
 import { ConfirmDialog } from "./components/ConfirmDialog";
 import { formatMoney } from "./utils/format";
+import './styles.css';
+import './App.css';
 
 export default function App() {
   // Source of truth for the demo
