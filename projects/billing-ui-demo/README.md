@@ -28,7 +28,7 @@ This project is intentionally **sanitized**:
   
 ## Screenshots
 ![Invoice table](docs/table.png)
-![Create invoice modal](https://github.com/SvitlanaKoval/portfolio/blob/main/projects/billing-ui-demo/docs/modal-add.png)
+![Create invoice modal](docs/modal-add.png)
 ![Edit invoice modal](docs/modal-edit.png)
 ![Confirmation delete message](docs/confirm-delete.png)
 
