@@ -25,6 +25,10 @@ This project is intentionally **sanitized**:
 - React + TypeScript + Vite
 - react-hook-form
 - zod
+  
+## Screenshots
+![Invoice table](projects/billing-ui-demo/docs/table.png)
+![Create invoice modal](projects/billing-ui-demo/docs/modal-add.png)
 
 ## Getting Started
 ```bash
