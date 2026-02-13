@@ -29,6 +29,8 @@ This project is intentionally **sanitized**:
 ## Screenshots
 ![Invoice table](projects/billing-ui-demo/docs/table.png)
 ![Create invoice modal](projects/billing-ui-demo/docs/modal-add.png)
+![Edit invoice modal](projects/billing-ui-demo/docs/modal-edit.png)
+![Confirmation delete message](projects/billing-ui-demo/docs/confirm-delete.png)
 
 ## Getting Started
 ```bash
