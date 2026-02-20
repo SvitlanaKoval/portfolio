@@ -7,6 +7,7 @@ A complex workflow screen with multiple tabs and modals, data-heavy interactions
 - Tech: JavaScript, React-style component patterns, SQL-backed datasets
 - Focus: Reliability, maintainability, and user efficiency
 
+Repo: [projects/billing-ui-demo](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/billing-ui-demo)
 > *The code sample has been committed (sanitized/recreated demo version).*
 
 ---
