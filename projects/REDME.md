@@ -14,18 +14,12 @@ Repo: [projects/billing-ui-demo](https://github.com/SvitlanaKoval/portfolio/tree
 
 ### 2) Account Registration UI (React Form + Validation)
 A production-style account registration flow demonstrating form architecture, reusable components, and client-side validation logic similar to real SaaS onboarding experiences.
-
-What I built:
-
-- Modular registration form using reusable input components
-- Client-side validation (email, password strength, required fields)
-- Error handling and user feedback patterns
-- Clean UI structure for scalability and maintainability
+**What I built:** Modular registration form using reusable input components, Client-side validation (email, password strength, required fields), Error handling and user feedback patterns, Clean UI structure for scalability and maintainability
 
 - Tech: JavaScript, React, component-driven architecture, custom validation utilities, CSS styling with reusable layout patterns
 - Focus: Form UX and accessibility, maintainable component design, real-world onboarding workflow simulation
 
-Repo: (https://github.com/SvitlanaKoval/portfolio/tree/main/projects/account-registration)
+Repo: [projects/account-registration](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/account-registration)
 
 ---
 
