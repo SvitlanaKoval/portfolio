@@ -40,12 +40,12 @@ This project focuses on **predictable state management, scalable component desig
 - Reusable CSS layout patterns
 
 ## Screenshots
-![Account Registration](docs/Account Registration.png)
-![Fix the errors](docs/Fix the errors.png)
-![Checking requirement fields](docs/Checking requirement fields.png)
-![Password validation](docs/Password validation.png)
-![Password validation 2](docs/Password validation 2.png)
-![Successfull account creation](docs/Successfull account creation.png)
+![Account Registration](docs/account-registration.png)
+![Fix the errors](docs/fix-errors.png)
+![Checking requirement fields](docs/checking-requirement-fields.png)
+![Password validation](docs/password-validation.png)
+![Password validation 2](docs/password-validation-2.png)
+![Successfull account creation](docs/successfull-account-creation.png)
 
 ## Getting Started
 ```bash
