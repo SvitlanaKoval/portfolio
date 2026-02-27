@@ -1,16 +1,53 @@
-# React + Vite
+# Account Registration UI (React Form + Validation)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-style **account registration flow** demonstrating form architecture, reusable components, and client-side validation logic similar to real SaaS onboarding experiences.
+This project focuses on **predictable state management, scalable component design, and strong UX validation patterns.**
 
-Currently, two official plugins are available:
+## What I Built
+- Modular registration form using reusable input components
+- Client-side validation (email format, password rules, required fields)
+- Password confirmation matching logic
+- Terms agreement validation
+- Clear error handling and user feedback patterns
+- Clean UI structure for scalability and maintainability
+- Dark-themed, modern onboarding interface
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Architecture Focus
+- **Component-Driven Design**
+    - Reusable InputField components
+    - Controlled form state
+    - Separation between UI and validation logic
+    - Scalable structure ready for backend integration
+- **Validation Strategy**
+    - Field-level validation
+    - Real-time feedback on user input
+    - Password confirmation matching
+    - Prevent submission on invalid state
+    - Accessible error messaging patterns
+- **UX Considerations**
+    - Logical field grouping
+    - Password masking
+    - Clear call-to-action button
+    - Friendly validation messages
+    - Predictable state transitions
 
-## React Compiler
+## Tech Stack
+- React
+- JavaScript
+- Vite
+- Component-driven architecture
+- Custom validation utilities
+- Reusable CSS layout patterns
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
+![Account Registration](docs/Account Registration.png)
+![Fix the errors](docs/Fix the errors.png)
+![Checking requirement fields](docs/Checking requirement fields.png)
+![Password validation](docs/Password validation.png)
+![Password validation 2](docs/Password validation 2.png)
+![Successfull account creation](docs/Successfull account creation.png)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+```bash
+npm install
+npm run dev
