@@ -1,0 +1,12 @@
+{
+  "name": "real-time-trading-ui-demo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:server": "node services/mock-ws-server/src/server.ts"
+  }
+}
