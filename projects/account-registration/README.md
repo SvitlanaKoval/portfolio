@@ -42,7 +42,7 @@ This project focuses on **predictable state management, scalable component desig
 ## Screenshots
 ![Account Registration](docs/account-registration.png)
 ![Fix the errors](docs/fix-errors.png)
-![Checking requirement fields](docs/checking-requirement-fields.png)
+![Checking requirement fields](docs/checking-reqirement-fields.png)
 ![Password validation](docs/password-validation.png)
 ![Password validation 2](docs/password-validation-2.png)
 ![Successfull account creation](docs/successfull-account-creation.png)
