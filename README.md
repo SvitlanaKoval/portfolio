@@ -49,7 +49,7 @@ A practice UI for real-time market dashboards (charts, streaming updates, order 
 - Tech: React, TypeScript, WebSockets, state management patterns
 - Focus: Rendering performance and clean UX
 
-Repo: (add link when ready)
+Repo: [projects/real-time-trading-ui-demo](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/real-time-trading-ui-demo)
 
 ---
 
