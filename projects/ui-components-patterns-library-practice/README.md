@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# UI Components & Patterns Library (Practice)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small front-end practice project built with **React, TypeScript**, and **CSS utility-style patterns** to demonstrate reusable UI building blocks and clean component design.
 
-Currently, two official plugins are available:
+This project is part of my portfolio and focuses on creating practical patterns that appear in real business applications: **tables, modals, forms, validation helpers, loading states, and error handling.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- React
+- TypeScript
+- Vite
+- CSS / Tailwind-like utility patterns
 
-## React Compiler
+## Features
+- Reusable data table component
+  - sortable columns
+  - empty state
+  - loading state
+  - error state
+- Reusable modal component
+  - overlay
+  - close button
+  - ESC key handling
+  - action footer
+- Reusable form patterns
+  - labeled fields
+  - required field handling
+  - inline validation messages
+  - disabled submit states
+- Validation helpers
+  - simple reusable validators
+  - error message mapping
+- Shared UI states
+  - skeleton / loading feedback
+  - empty data state
+  - recoverable error message blocks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Why I built this
 
-## Expanding the ESLint configuration
+In my current software engineering work, I often build and improve business-facing UI flows with forms, tables, and modal-driven workflows. I created this practice project to showcase the kinds of reusable front-end patterns that help teams move faster while keeping the UI consistent and maintainable.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project Goals
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Practice reusable component design
+- Keep components small and composable
+- Separate UI, state, and validation logic clearly
+- Build portfolio-ready examples that mirror real production patterns
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Screenshots
+![UI components library screen](docs/ui-components-library-screen.png)
+![Reusable Table](docs/reusable-table.png)
+![Reusable Modal](docs/reusable-modal.png)
+![Reusable Text Field](docs/reusable-text-field.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Getting Started
+```bash
+npm install
+npm run dev
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
