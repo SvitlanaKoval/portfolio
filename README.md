@@ -57,7 +57,7 @@ Repo: [projects/real-time-trading-ui-demo](https://github.com/SvitlanaKoval/port
 Reusable UI patterns: tables, modals, forms, validation helpers, loading/error states.
 - Tech: React, TypeScript, CSS/Tailwind-like utility patterns
 
-Repo: (add link when ready)
+Repo: [projects/ui-components-patterns-library-practice](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/ui-components-patterns-library-practice)
 
 ---
 
