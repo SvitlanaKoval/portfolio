@@ -3,178 +3,633 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Svitlana Koval | Portfolio</title>
+    <title>Svitlana Koval | Software Engineer Portfolio</title>
     <style>
-      body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.5; }
-      header { padding: 48px 20px; max-width: 920px; margin: 0 auto; }
-      h1 { margin: 0 0 8px; font-size: 36px; }
-      .tag { opacity: 0.8; }
-      main { padding: 0 20px 60px; max-width: 920px; margin: 0 auto; }
-      .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 18px; margin: 14px 0; }
-      .row { display: flex; gap: 10px; flex-wrap: wrap; }
-      .pill { border: 1px solid #ddd; border-radius: 999px; padding: 6px 10px; font-size: 13px; }
-      a { text-decoration: none; }
-      footer { padding: 20px; max-width: 920px; margin: 0 auto; opacity: 0.8; }
+      :root {
+        --bg: #f7f7fb;
+        --bg-soft: #ffffff;
+        --text: #1d2433;
+        --muted: #667085;
+        --primary: #6d5dfc;
+        --primary-dark: #5546df;
+        --accent: #00b8a9;
+        --border: #e6e8f0;
+        --shadow: 0 18px 45px rgba(29, 36, 51, 0.1);
+        --radius: 22px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(109, 93, 252, 0.16), transparent 32rem),
+          radial-gradient(circle at top right, rgba(0, 184, 169, 0.13), transparent 28rem),
+          var(--bg);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px 0;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .logo-mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        color: #fff;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        box-shadow: 0 14px 28px rgba(109, 93, 252, 0.25);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-dark);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        gap: 34px;
+        align-items: stretch;
+        padding: 42px 0 34px;
+      }
+
+      .hero-card,
+      .profile-card,
+      .section-card,
+      .project-card {
+        border: 1px solid rgba(230, 232, 240, 0.9);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-card {
+        padding: clamp(28px, 5vw, 56px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-card::after {
+        content: "";
+        position: absolute;
+        right: -80px;
+        bottom: -90px;
+        width: 240px;
+        height: 240px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(109, 93, 252, 0.18), rgba(0, 184, 169, 0.16));
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--primary-dark);
+        background: rgba(109, 93, 252, 0.1);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 22px 0 16px;
+        font-size: clamp(42px, 7vw, 76px);
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 22px;
+      }
+
+      .lead {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(29, 36, 51, 0.12);
+      }
+
+      .button.primary {
+        color: #fff;
+        border-color: transparent;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+      }
+
+      .profile-card {
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+      }
+
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 88px;
+        height: 88px;
+        margin-bottom: 22px;
+        border-radius: 28px;
+        color: #fff;
+        background: linear-gradient(135deg, #1d2433, var(--primary));
+        font-size: 34px;
+        font-weight: 900;
+        box-shadow: 0 18px 32px rgba(29, 36, 51, 0.18);
+      }
+
+      .profile-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .stats {
+        display: grid;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .stat {
+        padding: 14px;
+        border-radius: 18px;
+        background: #f5f6ff;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 22px;
+      }
+
+      section {
+        padding: 34px 0;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        margin-bottom: 18px;
+      }
+
+      .section-header p {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 22px;
+        min-height: 310px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 24px 55px rgba(29, 36, 51, 0.14);
+      }
+
+      .project-icon {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, rgba(109, 93, 252, 0.14), rgba(0, 184, 169, 0.16));
+        font-size: 24px;
+      }
+
+      .project-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .row {
+        display: flex;
+        gap: 9px;
+        flex-wrap: wrap;
+        margin-top: auto;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(109, 93, 252, 0.18);
+        border-radius: 999px;
+        padding: 7px 11px;
+        color: #3f3b7a;
+        background: rgba(109, 93, 252, 0.08);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .section-card {
+        padding: 22px;
+      }
+
+      .section-card h3 {
+        font-size: 18px;
+        margin-bottom: 14px;
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 22px;
+        align-items: center;
+        padding: 30px;
+        border-radius: var(--radius);
+        color: #fff;
+        background:
+          radial-gradient(circle at top right, rgba(255, 255, 255, 0.25), transparent 18rem),
+          linear-gradient(135deg, #1d2433, var(--primary));
+        box-shadow: var(--shadow);
+      }
+
+      .contact h2,
+      .contact p {
+        margin: 0;
+      }
+
+      .contact p {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .contact .button {
+        color: #1d2433;
+        background: #fff;
+      }
+
+      footer {
+        padding: 26px 0 38px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .projects-grid,
+        .skills-grid,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          width: min(100% - 26px, 1120px);
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: space-between;
+          gap: 10px;
+        }
+
+        .hero {
+          padding-top: 18px;
+        }
+
+        .hero-card,
+        .profile-card,
+        .section-card,
+        .project-card,
+        .contact {
+          border-radius: 18px;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Svitlana Koval</h1>
-      <div class="tag">Software Engineer | Frontend / Full-Stack (JS/TS, React, Node.js)</div>
-      <p>
-        I build modern web UIs and help modernize legacy systems. Currently at Great Valley Technologies (GVT),
-        modernizing a large medical/billing application.
-      </p>
-      <p>
-        <a href="https://github.com/SvitlanaKoval">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/svitlana-koval-74ba3a357/">LinkedIn</a>
-      </p>
-    </header>
-
-    <main>
-      <h2>Projects</h2>
-
-      <div class="card">
-        <h3>Charge Entry Module (Healthcare/Billing UI)</h3>
-        <p>
-          Complex workflow screen with multiple tabs and modals, data-heavy interactions, and validation.
-          Focus: maintainability, performance, and UX.
-        </p>
-        <div class="row">
-          <span class="pill">JavaScript</span>
-          <span class="pill">UI Architecture</span>
-          <span class="pill">Refactoring</span>
-          <span class="pill">SQL</span>
+    <div class="page">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="logo" href="#top" aria-label="Svitlana Koval portfolio home">
+          <span class="logo-mark">SK</span>
+          <span>Svitlana Koval</span>
+        </a>
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
+      </nav>
 
-      <div class="card">
-        <h3>Real-time Trading UI Demo (Practice)</h3>
-        <p>Dashboard UI with streaming updates, chart area, and order panel. Focus: performance patterns.</p>
-        <div class="row">
-          <span class="pill">React</span>
-          <span class="pill">TypeScript</span>
-          <span class="pill">WebSockets</span>
+      <header id="top" class="hero">
+        <div class="hero-card">
+          <span class="eyebrow">Frontend / Full-Stack Software Engineer</span>
+          <h1>Building clean, modern web UIs for complex business systems.</h1>
+          <p class="lead">
+            I build modern web interfaces, improve user workflows, and help modernize legacy systems.
+            Currently at Great Valley Technologies, I work on a large medical and billing application with
+            data-heavy screens, complex validation, and production workflows.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/SvitlanaKoval" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/svitlana-koval-74ba3a357/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+            <a class="button" href="#projects">See Projects</a>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <h3>UI Components & Patterns Library (Practice)</h3>
-        <p>Reusable UI components: forms, modals, tables, loading/error states, validation helpers.</p>
-        <div class="row">
-          <span class="pill">React</span>
-          <span class="pill">TypeScript</span>
-          <span class="pill">CSS</span>
-        </div>
-      </div>
+        <aside class="profile-card" aria-label="Professional highlights">
+          <div>
+            <div class="avatar">SK</div>
+            <h3>Reliable engineer with academic depth and production experience.</h3>
+            <p>
+              I enjoy taking complicated workflows, organizing the logic, and turning them into clear,
+              maintainable interfaces.
+            </p>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <strong>60+</strong>
+              <span>application screens modernized or optimized</span>
+            </div>
+            <div class="stat">
+              <strong>3+ years</strong>
+              <span>professional software engineering experience in the U.S.</span>
+            </div>
+            <div class="stat">
+              <strong>10+ years</strong>
+              <span>computer science teaching and technical mentoring</span>
+            </div>
+          </div>
+        </aside>
+      </header>
 
-      <h2>Skills</h2>
-      <div class="row">
-        <span class="pill">JavaScript</span>
-        <span class="pill">TypeScript</span>
-        <span class="pill">Python</span>
-        <span class="pill">C#</span>
-        <span class="pill">Scratch</span>
-      </div>
+      <main>
+        <section id="projects">
+          <div class="section-header">
+            <div>
+              <h2>Featured Projects</h2>
+              <p>Selected work focused on frontend architecture, data-heavy UI, reusable patterns, and real-time interfaces.</p>
+            </div>
+          </div>
 
-      <div class="row">
-        <span class="pill">React</span>
-        <span class="pill">Redux</span>
-        <span class="pill">Node.js</span>
-        <span class="pill">Next.js</span>
-        <span class="pill">Django</span>
-      </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-icon">🏥</div>
+              <div>
+                <h3>Charge Entry Module</h3>
+                <p>
+                  Healthcare billing workflow with multiple tabs, modals, data-heavy interactions, validation,
+                  and maintainability-focused refactoring.
+                </p>
+              </div>
+              <div class="row">
+                <span class="pill">JavaScript</span>
+                <span class="pill">UI Architecture</span>
+                <span class="pill">Refactoring</span>
+                <span class="pill">SQL</span>
+              </div>
+            </article>
 
-      <div class="row">
-        <span class="pill">HTML</span>
-        <span class="pill">CSS</span>
-        <span class="pill">XML</span>
-        <span class="pill">HTTP/HTTPS</span>
-      </div>
+            <article class="project-card">
+              <div class="project-icon">📈</div>
+              <div>
+                <h3>Real-time Trading UI Demo</h3>
+                <p>
+                  Practice dashboard with streaming updates, chart area, watchlist behavior, and performance-focused frontend patterns.
+                </p>
+              </div>
+              <div class="row">
+                <span class="pill">React</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">WebSockets</span>
+              </div>
+            </article>
 
-      <div class="row">
-        <span class="pill">ChatGPT</span>
-        <span class="pill">GitHub Copilot</span>
-      </div>
+            <article class="project-card">
+              <div class="project-icon">🧩</div>
+              <div>
+                <h3>UI Components & Patterns Library</h3>
+                <p>
+                  Reusable components for forms, modals, tables, validation helpers, loading states, and error states.
+                </p>
+              </div>
+              <div class="row">
+                <span class="pill">React</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">CSS</span>
+              </div>
+            </article>
+          </div>
+        </section>
 
-      <div class="row">
-        <span class="pill">REST API</span> 
-        <span class="pill">JSON</span>
-        <span class="pill">Postman</span>
-        <span class="pill">Swagger</span>
-        <span class="pill">SOAPUI</span>
-        <span class="pill">WSS</span>
-      </div>
+        <section id="skills">
+          <div class="section-header">
+            <div>
+              <h2>Skills</h2>
+              <p>A practical toolkit for frontend development, full-stack collaboration, databases, debugging, and delivery.</p>
+            </div>
+          </div>
 
-      <div class="row">
-        <span class="pill">ChromeDevtools</span>
-        <span class="pill">Charles Proxy</span>
-      </div>
+          <div class="skills-grid">
+            <div class="section-card">
+              <h3>Languages</h3>
+              <div class="row">
+                <span class="pill">JavaScript</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">Python</span>
+                <span class="pill">C#</span>
+                <span class="pill">Scratch</span>
+              </div>
+            </div>
 
-      <div class="row">
-        <span class="pill">SQL</span>
-        <span class="pill">MS SQL Server</span>
-        <span class="pill">MySQL</span>
-        <span class="pill">Oracle</span>
-        <span class="pill">MongoDB</span>
-      </div>
+            <div class="section-card">
+              <h3>Frontend & Backend</h3>
+              <div class="row">
+                <span class="pill">React</span>
+                <span class="pill">Redux</span>
+                <span class="pill">Node.js</span>
+                <span class="pill">Next.js</span>
+                <span class="pill">Django</span>
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+              </div>
+            </div>
 
-      <div class="row">
-        <span class="pill">Git</span>
-        <span class="pill">GitHub</span>
-        <span class="pill">Bitbucket</span>
-        <span class="pill">Beyond Compare</span>
-      </div>
+            <div class="section-card">
+              <h3>APIs, Testing & Debugging</h3>
+              <div class="row">
+                <span class="pill">REST API</span>
+                <span class="pill">JSON</span>
+                <span class="pill">Postman</span>
+                <span class="pill">Swagger</span>
+                <span class="pill">SOAPUI</span>
+                <span class="pill">WSS</span>
+                <span class="pill">Chrome DevTools</span>
+                <span class="pill">Charles Proxy</span>
+              </div>
+            </div>
 
-      <div class="row">
-        <span class="pill">AWS</span>
-        <span class="pill">Azure</span>
-        <span class="pill">Jenkins</span>
-        <span class="pill">GitHub Actions</span>
-      </div>
+            <div class="section-card">
+              <h3>Databases</h3>
+              <div class="row">
+                <span class="pill">SQL</span>
+                <span class="pill">MS SQL Server</span>
+                <span class="pill">MySQL</span>
+                <span class="pill">Oracle</span>
+                <span class="pill">MongoDB</span>
+              </div>
+            </div>
 
-      <div class="row">
-        <span class="pill">Windows</span>
-        <span class="pill">macOS</span>
-        <span class="pill">Linux</span>
-      </div>
+            <div class="section-card">
+              <h3>Tools & Platforms</h3>
+              <div class="row">
+                <span class="pill">Git</span>
+                <span class="pill">GitHub</span>
+                <span class="pill">Bitbucket</span>
+                <span class="pill">VS Code</span>
+                <span class="pill">Servoy Developer</span>
+                <span class="pill">Progress Developer Studio</span>
+                <span class="pill">AppBuilder</span>
+                <span class="pill">Beyond Compare</span>
+              </div>
+            </div>
 
-      <div class="row">
-        <span class="pill">Visual Studio Code</span>
-        <span class="pill">Servoy Developer</span>
-        <span class="pill">Progress Developer Studio</span>
-        <span class="pill">AppBuilder</span>
-      </div>
+            <div class="section-card">
+              <h3>Delivery & Design</h3>
+              <div class="row">
+                <span class="pill">Agile</span>
+                <span class="pill">Scrum</span>
+                <span class="pill">Kanban</span>
+                <span class="pill">TDD</span>
+                <span class="pill">BDD</span>
+                <span class="pill">CI/CD</span>
+                <span class="pill">AWS</span>
+                <span class="pill">Azure</span>
+                <span class="pill">Jenkins</span>
+                <span class="pill">GitHub Actions</span>
+                <span class="pill">Figma</span>
+                <span class="pill">UML</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div class="row">
-        <span class="pill">JIRA</span>
-        <span class="pill">Confluence</span>
-        <span class="pill">SmartQ</span>
-      </div>
+        <section id="contact">
+          <div class="contact">
+            <div>
+              <h2>Let’s build something clean and useful.</h2>
+              <p>Open to frontend and full-stack software engineering opportunities.</p>
+            </div>
+            <a class="button" href="https://www.linkedin.com/in/svitlana-koval-74ba3a357/" target="_blank" rel="noreferrer">Contact Me</a>
+          </div>
+        </section>
+      </main>
 
-      <div class="row">
-        <span class="pill">Agile</span>
-        <span class="pill">Scrum</span>
-        <span class="pill">Kanban</span>
-        <span class="pill">Waterfall</span>
-        <span class="pill">BDD</span>
-        <span class="pill">TDD</span>
-        <span class="pill">CI/CD pipeline</span>
-      </div>
+      <footer>© <span id="y"></span> Svitlana Koval. Built with HTML, CSS, and JavaScript.</footer>
+    </div>
 
-      <div class="row">
-        <span class="pill">Figma</span>
-        <span class="pill">UML</span>
-        <span class="pill">IDEF0</span>
-        <span class="pill">DFD</span>
-        <span class="pill">MathCad</span>
-        <span class="pill">MathLab</span>
-        <span class="pill">LabView</span>
-      </div>
-    </main>
-
-    <footer>© <span id="y"></span> Svitlana Koval</footer>
-    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
-
