@@ -24,12 +24,13 @@ export function ConfirmDialog({
       title={title}
       isOpen={isOpen}
       onClose={onCancel}
+      className="custom-modal"
       footer={
         <>
-          <button className="ghost" onClick={onCancel}>
+          <button className="btn-primary-custom" onClick={onCancel}>
             {cancelText}
           </button>
-          <button className="danger" onClick={onConfirm}>
+          <button className="btn-primary-custom" onClick={onConfirm}>
             {confirmText}
           </button>
         </>

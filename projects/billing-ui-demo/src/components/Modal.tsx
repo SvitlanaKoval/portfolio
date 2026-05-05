@@ -6,6 +6,7 @@ type Props = {
   onClose: () => void;
   children: React.ReactNode;
   footer?: React.ReactNode;
+  className?: string;
 };
 
 export function Modal({ title, isOpen, onClose, children, footer }: Props) {

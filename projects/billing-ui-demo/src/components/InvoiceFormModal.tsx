@@ -103,13 +103,14 @@ export function InvoiceFormModal({ isOpen, mode, initial, onClose, onSave }: Pro
       title={mode === "create" ? "Add invoice (demo)" : "Edit invoice (demo)"}
       isOpen={isOpen}
       onClose={onClose}
+      className="custom-modal"
       footer={
         <>
-          <button className="ghost" onClick={onClose} disabled={isSubmitting}>
+          <button className="btn-secondary-custom" onClick={onClose} disabled={isSubmitting}>
             Cancel
           </button>
           <button
-            className="primary"
+            className="btn-primary-custom"
             onClick={handleSubmit((values) => {
               onSave(toInvoice(values));
               onClose();
@@ -122,33 +123,33 @@ export function InvoiceFormModal({ isOpen, mode, initial, onClose, onSave }: Pro
       }
     >
       <form className="form-grid" onSubmit={(e) => e.preventDefault()}>
-        <div>
+        <div className="app-card">
           <label className="label">Account name</label>
-          <input placeholder="e.g., Green Valley Clinic" {...register("accountName")} />
+          <input className="form-input" placeholder="e.g., Green Valley Clinic" {...register("accountName")} />
           {errors.accountName && <div className="error">{errors.accountName.message}</div>}
         </div>
 
-        <div>
+        <div className="app-card">
           <label className="label">Invoice number</label>
-          <input placeholder="INV-1001" {...register("invoiceNumber")} />
+          <input className="form-input" placeholder="INV-1001" {...register("invoiceNumber")} />
           {errors.invoiceNumber && <div className="error">{errors.invoiceNumber.message}</div>}
         </div>
 
-        <div>
+        <div className="app-card">
           <label className="label">Service date</label>
-          <input placeholder="YYYY-MM-DD" {...register("serviceDate")} />
+          <input className="form-input" placeholder="YYYY-MM-DD" {...register("serviceDate")} />
           {errors.serviceDate && <div className="error">{errors.serviceDate.message}</div>}
         </div>
 
-        <div>
+        <div className="app-card">
           <label className="label">Amount (USD)</label>
-          <input placeholder="125.00" {...register("amountDollars")} />
+          <input className="form-input" placeholder="125.00" {...register("amountDollars")} />
           {errors.amountDollars && <div className="error">{errors.amountDollars.message}</div>}
         </div>
 
-        <div>
-          <label className="label">Status</label>
-          <select {...register("status")}>
+        <div className="app-card">
+          <label  className="label">Status</label>
+          <select className="form-input" {...register("status")}>
             <option value="Open">Open</option>
             <option value="Paid">Paid</option>
             <option value="Denied">Denied</option>
