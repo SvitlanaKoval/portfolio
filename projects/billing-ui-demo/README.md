@@ -27,7 +27,7 @@ This project is intentionally **sanitized**:
 - zod
   
 ## Screenshots
-![Invoice table](docs/table.png)
+![Main Form](docs/main-form.png)
 ![Create invoice modal](docs/modal-add.png)
 ![Edit invoice modal](docs/modal-edit.png)
 ![Confirmation delete message](docs/confirm-delete.png)
