@@ -21,49 +21,16 @@ export function Modal({ title, isOpen, onClose, children, footer }: Props) {
   if (!isOpen) return null;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label={title}
-      onMouseDown={onClose}
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.4)",
-        display: "flex",
-        padding: 18,
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 50,
-      }}
-    >
-      <div
-        onMouseDown={(e) => e.stopPropagation()}
-        style={{
-          width: "min(720px, 100%)",
-          background: "white",
-          borderRadius: 16,
-          border: "1px solid #eee",
-          boxShadow: "0 18px 60px rgba(0,0,0,0.2)",
-          overflow: "hidden",
-        }}
-      >
-        <div style={{ padding: 16, borderBottom: "1px solid #f0f0f0" }} className="row-between">
-          <div>
-            <div style={{ fontWeight: 800 }}>{title}</div>
-          </div>
-          <button className="ghost" onClick={onClose} aria-label="Close">
-            ✕
-          </button>
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal-card" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header row-between">
+          <h2>{title}</h2>
+          <button className="primary" onClick={onClose}>✕</button>
         </div>
 
-        <div style={{ padding: 16 }}>{children}</div>
+        <div className="modal-body">{children}</div>
 
-        {footer && (
-          <div style={{ padding: 16, borderTop: "1px solid #f0f0f0" }} className="row-between">
-            {footer}
-          </div>
-        )}
+        {footer && <div className="modal-footer row-between">{footer}</div>}
       </div>
     </div>
   );
