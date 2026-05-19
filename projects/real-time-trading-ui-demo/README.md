@@ -39,4 +39,5 @@ WS: ws://localhost:8080
 - `services/mock-ws-server` – WebSocket market simulator
 
 ## Screenshots
-![Real-time Trading UI Demo](docs/real-time-tradind-ui-demo.png)
+![Real-time Trading UI Demo](docs/real-time-tradind-ui-demo1.png)
+![Real-time Trading UI Demo](docs/real-time-tradind-ui-demo2.png)
