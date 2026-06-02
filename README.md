@@ -3,7 +3,7 @@
 
 I’m a Software Engineer focused on building modern web applications with **JavaScript/TypeScript, React, and Node.js**.  
 Currently, I’m an Associate Software Engineer at **Great Valley Technologies (GVT)**, where I help modernize a large-scale **medical/billing** application—migrating legacy screens and workflows into a modern web architecture.
-https://svitlanakoval.github.io/portfolio/site/
+Here is my web site ---> https://svitlanakoval.github.io/portfolio/  <---
 
 📍 Based in Oregon, USA  
 💻 Tech: JavaScript/TypeScript, React, Node.js, HTML/CSS, SQL, Git/GitHub  
