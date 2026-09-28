@@ -1,77 +1,75 @@
-# portfolio
-# Svitlana Koval — Software Engineer (Frontend / Full-Stack)
+# Svitlana Koval — Software Engineer
 
-I’m a Software Engineer focused on building modern web applications with **JavaScript/TypeScript, React, and Node.js**.  
-Currently, I’m an Associate Software Engineer at **Great Valley Technologies (GVT)**, where I help modernize a large-scale **medical/billing** application—migrating legacy screens and workflows into a modern web architecture.
+Personal portfolio site → **https://svitlanakoval.github.io/portfolio/**
 
-Here is my web site ---> https://svitlanakoval.github.io/portfolio/  <---
+📍 Portland metropolitan area, Oregon · Authorized to work in the U.S. without sponsorship
 
-📍 Based in Oregon, USA  
-💻 Tech: JavaScript/TypeScript, React, Node.js, HTML/CSS, SQL, Git/GitHub  
-🧩 Experience: Legacy-to-modern migrations, complex UI modules, refactoring, performance + UX improvements
+I build production web applications with TypeScript, React and Next.js on the front,
+and Node.js, PostgreSQL and Prisma behind them. Three years shipping software for
+medical, billing, payment and manufacturing systems.
 
 ---
 
-## Highlights
-- Migrated/refactored **60+ screens** from legacy implementation to a modern web-based architecture
-- Built and improved complex, data-heavy UI modules (tables, filters, forms, modals, validation)
-- Collaborated with Product, QA, and Backend teams to deliver incremental releases
-- Strong documentation skills (SRS, guidelines, technical notes) from academic + industry background
+## Tech stack
+
+**Languages** TypeScript · JavaScript
+**Frontend** React · Next.js · Tailwind CSS · HTML5 · CSS3
+**Backend & data** Node.js · REST APIs · JSON · PostgreSQL · Prisma · Supabase
+**DevOps & tooling** Git/GitHub · GitHub Actions · Jenkins · Docker · Vercel
+**Workflow** AI-assisted development (Claude, Codex, Copilot) · unit testing · code review
 
 ---
 
-## Featured Projects
+## Selected achievements
 
-### 1) Charge Entry Module (Healthcare/Billing UI)
-A complex workflow screen with multiple tabs and modals, data-heavy interactions, validations, and role-based UI logic.  
-**What I did:** UI architecture, refactoring, performance improvements, data handling, UX polish.
+**Associate Software Engineer** — Great Valley Technologies · Practice Alternatives, Inc. (Mar 2023 – present)
 
-- Tech: JavaScript, React-style component patterns, SQL-backed datasets
-- Focus: Reliability, maintainability, and user efficiency
+- Rewrote and optimized **60+ application screens** for speed, usability and maintainability
+- Migrated complex business logic and UI workflows off a legacy ABL platform onto a modern JavaScript architecture
+- Introduced **unit testing** into the delivery process, cutting regressions and enabling CI
+- Set the team's code review and engineering standards; mentor QA on debugging and root-cause analysis
 
-Repo: [projects/billing-ui-demo](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/billing-ui-demo)
-> *The code sample has been committed (sanitized/recreated demo version).*
+**Instructor / Associate Professor** — Kremenchuk Mykhailo Ostrohradskyi National University (2012 – 2023)
 
----
+- Promoted from lab assistant to instructor, then to associate professor
+- Built and taught full courses in programming, systems modeling, optimization and UML design
 
-### 2) Account Registration UI (React Form + Validation)
-A production-style account registration flow demonstrating form architecture, reusable components, and client-side validation logic similar to real SaaS onboarding experiences.
+**Software Engineer Intern** — STC "Information Systems" (2012)
 
-**What I built:** Modular registration form using reusable input components, Client-side validation (email, password strength, required fields), Error handling and user feedback patterns, Clean UI structure for scalability and maintainability
-
-- Tech: JavaScript, React, component-driven architecture, custom validation utilities, CSS styling with reusable layout patterns
-- Focus: Form UX and accessibility, maintainable component design, real-world onboarding workflow simulation
-
-Repo: [projects/account-registration](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/account-registration)
+- Helped deliver a C# production-automation system, from data analysis through to shipped user documentation
 
 ---
 
-### 3) Real-time Trading UI Demo (Practice Project)
-A practice UI for real-time market dashboards (charts, streaming updates, order panel).
-- Tech: React, TypeScript, WebSockets, state management patterns
-- Focus: Rendering performance and clean UX
+## Education
 
-Repo: [projects/real-time-trading-ui-demo](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/real-time-trading-ui-demo)
+**Doctorate in Computer Science** — Kremenchuk Mykhailo Ostrohradskyi National University, Ukraine
 
 ---
 
-### 4) UI Components & Patterns Library (Practice)
-Reusable UI patterns: tables, modals, forms, validation helpers, loading/error states.
-- Tech: React, TypeScript, CSS/Tailwind-like utility patterns
+## Projects
 
-Repo: [projects/ui-components-patterns-library-practice](https://github.com/SvitlanaKoval/portfolio/tree/main/projects/ui-components-patterns-library-practice)
-
----
-
-## Skills
-**Frontend:** React, TypeScript, JavaScript, HTML5, CSS3, responsive UI  
-**Backend:** Node.js basics, APIs, SQL  
-**Tooling:** Git/GitHub, testing concepts, debugging, code review  
-**Work style:** high ownership, iterative delivery, strong communication
+| Project | What it is | Live | Source |
+| --- | --- | --- | --- |
+| Charge Entry Module | Healthcare billing workflow — tabs, modals, data-heavy tables, validation | [Demo](https://svitlanakoval.github.io/billing-ui-demo/) | [Repo](https://github.com/SvitlanaKoval/billing-ui-demo) |
+| Account Registration UI | Production-style onboarding flow with reusable inputs and validation | [Demo](https://svitlanakoval.github.io/account-registration/) | [Repo](https://github.com/SvitlanaKoval/account-registration) |
+| Real-Time Trading Dashboard | Streaming market UI over WebSockets, built for render performance | [Demo](https://svitlanakoval.github.io/real-time-trading-ui-demo/) | [Repo](https://github.com/SvitlanaKoval/real-time-trading-ui-demo) |
+| UI Components & Patterns | Reusable tables, modals, forms, validation and loading/error states | [Demo](https://svitlanakoval.github.io/ui-components-patterns-library-practice/) | [Repo](https://github.com/SvitlanaKoval/ui-components-patterns-library-practice) |
 
 ---
 
 ## Contact
-- LinkedIn: (https://www.linkedin.com/in/svitlana-koval-74ba3a357/)
-- GitHub: https://github.com/SvitlanaKoval
-- Email: (svitlana.koval@yahoo.com)
+
+- **Email** svitlana.koval@yahoo.com
+- **LinkedIn** https://www.linkedin.com/in/svitlana-koval-74ba3a357/
+- **GitHub** https://github.com/SvitlanaKoval
+
+---
+
+## Running this site locally
+
+No build step — it's a single static page.
+
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
+```
