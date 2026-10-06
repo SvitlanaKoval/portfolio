@@ -961,6 +961,88 @@
         font-weight: 600;
       }
 
+      /* collapsible job details */
+      .job-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 14px 6px 6px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--text);
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        transition:
+          border-color 0.25s,
+          background 0.25s;
+      }
+
+      .job-toggle:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+
+      .job-toggle-icon {
+        position: relative;
+        flex: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--accent-soft);
+      }
+
+      .job-toggle-icon::before,
+      .job-toggle-icon::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10px;
+        height: 2px;
+        margin: -1px 0 0 -5px;
+        border-radius: 2px;
+        background: var(--accent);
+        transition: transform 0.3s var(--ease);
+      }
+
+      .job-toggle-icon::after {
+        transform: rotate(90deg);
+      }
+
+      .job-toggle[aria-expanded="true"] .job-toggle-icon::after {
+        transform: rotate(0deg);
+      }
+
+      .job-details {
+        display: grid;
+        grid-template-rows: 0fr;
+        visibility: hidden;
+        transition:
+          grid-template-rows 0.4s var(--ease),
+          visibility 0s 0.4s;
+      }
+
+      .job-toggle[aria-expanded="true"] + .job-details {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        transition:
+          grid-template-rows 0.4s var(--ease),
+          visibility 0s;
+      }
+
+      .job-details > div {
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      .job-details ul {
+        padding-top: 16px;
+      }
+
       /* ---------------------------------------------------------------
          Projects
       --------------------------------------------------------------- */
@@ -1309,8 +1391,14 @@
         body::after,
         .header,
         .marquee,
-        .progress {
+        .progress,
+        .job-toggle {
           display: none;
+        }
+
+        .job-details {
+          grid-template-rows: 1fr;
+          visibility: visible;
         }
       }
     </style>
@@ -1648,29 +1736,42 @@
               <p class="org">
                 Great Valley Technologies · Practice Alternatives, Inc. — USA
               </p>
-              <ul>
-                <li>
-                  Rewrote and optimized
-                  <strong>60+ application screens</strong>, making them faster,
-                  easier to use and far easier to maintain.
-                </li>
-                <li>
-                  Migrated complex business logic and UI workflows off a legacy
-                  ABL platform onto a
-                  <strong>modern JavaScript architecture</strong>, with no loss
-                  of functionality.
-                </li>
-                <li>
-                  Introduced <strong>unit testing</strong> into the delivery
-                  process, cutting regressions and enabling continuous
-                  integration.
-                </li>
-                <li>
-                  Set the team's
-                  <strong>code review and engineering standards</strong>, and
-                  mentor QA on debugging and root-cause analysis.
-                </li>
-              </ul>
+              <button
+                class="job-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="job-details-2"
+              >
+                <span class="job-toggle-icon" aria-hidden="true"></span>
+                <span class="job-toggle-label">Show details</span>
+              </button>
+              <div class="job-details" id="job-details-2">
+                <div>
+                  <ul>
+                    <li>
+                      Rewrote and optimized
+                      <strong>60+ application screens</strong>, making them
+                      faster, easier to use and far easier to maintain.
+                    </li>
+                    <li>
+                      Migrated complex business logic and UI workflows off a
+                      legacy ABL platform onto a
+                      <strong>modern JavaScript architecture</strong>, with no
+                      loss of functionality.
+                    </li>
+                    <li>
+                      Introduced <strong>unit testing</strong> into the
+                      delivery process, cutting regressions and enabling
+                      continuous integration.
+                    </li>
+                    <li>
+                      Set the team's
+                      <strong>code review and engineering standards</strong>,
+                      and mentor QA on debugging and root-cause analysis.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </article>
 
             <article class="job reveal">
@@ -1681,20 +1782,33 @@
               <p class="org">
                 Kremenchuk Mykhailo Ostrohradskyi National University — Ukraine
               </p>
-              <ul>
-                <li>
-                  Promoted from lab assistant to instructor, then to
-                  <strong>associate professor</strong>.
-                </li>
-                <li>
-                  Built and taught full courses in
-                  <strong
-                    >programming, systems modeling, optimization and UML
-                    design</strong
-                  >
-                  — lectures, labs and exams from scratch.
-                </li>
-              </ul>
+              <button
+                class="job-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="job-details-3"
+              >
+                <span class="job-toggle-icon" aria-hidden="true"></span>
+                <span class="job-toggle-label">Show details</span>
+              </button>
+              <div class="job-details" id="job-details-3">
+                <div>
+                  <ul>
+                    <li>
+                      Promoted from lab assistant to instructor, then to
+                      <strong>associate professor</strong>.
+                    </li>
+                    <li>
+                      Built and taught full courses in
+                      <strong
+                        >programming, systems modeling, optimization and UML
+                        design</strong
+                      >
+                      — lectures, labs and exams from scratch.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </article>
 
             <article class="job reveal">
@@ -1703,14 +1817,27 @@
                 <span class="when">2012</span>
               </div>
               <p class="org">STC "Information Systems" — Ukraine</p>
-              <ul>
-                <li>
-                  Helped deliver a
-                  <strong>C# production-automation system</strong>, from data
-                  analysis through to the user documentation that shipped with
-                  it.
-                </li>
-              </ul>
+              <button
+                class="job-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="job-details-4"
+              >
+                <span class="job-toggle-icon" aria-hidden="true"></span>
+                <span class="job-toggle-label">Show details</span>
+              </button>
+              <div class="job-details" id="job-details-4">
+                <div>
+                  <ul>
+                    <li>
+                      Helped deliver a
+                      <strong>C# production-automation system</strong>, from
+                      data analysis through to the user documentation that
+                      shipped with it.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </article>
           </div>
         </div>
@@ -1946,6 +2073,19 @@
             menuBtn.setAttribute("aria-expanded", "false");
           }
         });
+
+        /* ---------------- collapsible jobs ---------------- */
+        Array.prototype.forEach.call(
+          document.querySelectorAll(".job-toggle"),
+          function (btn) {
+            var label = btn.querySelector(".job-toggle-label");
+            btn.addEventListener("click", function () {
+              var open = btn.getAttribute("aria-expanded") !== "true";
+              btn.setAttribute("aria-expanded", String(open));
+              label.textContent = open ? "Hide details" : "Show details";
+            });
+          },
+        );
 
         /* ---------------- reveal on scroll ---------------- */
         var revealables = document.querySelectorAll(".reveal");
